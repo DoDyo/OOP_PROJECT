@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../static/styling/css5.css"/>
+</head>
+<body>
+<div>
+    {% if bmiFloat <=18.5%}
+        <h1> Total BMI</h1>
+        {{ bmiFloat }}
+        {{ resulttext}}
+
+
+
+    {% elif 18.5<=bmiFloat<=22.9 %}
+
+        <h1> Total BMI</h1>
+        {{ bmiFloat }}<br><br>
+        {{ resulttext }}
+
+    {% elif 23<=bmiFloat<=27.4%}
+
+
+         {{ bmiFloat}}
+         {{ resulttext }}
+
+
+        <br>
+        <br>
+        <br>
+        <a href="{{ url_for('beginner') }}"> Gooooooo!</a>
+
+
+    {% else %}
+
+        <h1> Please TRY again!!! </h1>
+         <a href="{{ url_for('firstInput')}}"> Back</a>
+    {% endif %}
+
+</div>
+
+
+</body>
+</html>
